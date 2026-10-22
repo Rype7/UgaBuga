@@ -83,6 +83,17 @@ steam_appid.txt
 Config/*Local*.ini
 Config/**/DefaultEngine_Local.ini
 
+# --- Oyuncu kayıtları (SaveGame) ---
+# Her oyuncunun kendi ayarları/karakter kayıtları kendi bilgisayarında kalmalı.
+# UE kayıtları Saved/SaveGames/ altına .sav olarak yazar (Saved/ zaten ignore),
+# ama başka bir yere kopyalanırsa diye ekstra güvenlik:
+*.sav
+SaveGames/
+# Grafik/çözünürlük ayarları (GameUserSettings) da kişisel:
+GameUserSettings.ini
+# NOT: SG_Settings.uasset gibi SaveGame *Blueprint*'leri Content/ içindedir
+# ve repoda KALMALIDIR. Burada sadece oyuncunun kayıt dosyaları engelleniyor.
+
 # ============================================
 # ÖNEMLİ: Aşağıdakiler repoda KALMALI
 # (yanlışlıkla ignore edilmesin diye not)
